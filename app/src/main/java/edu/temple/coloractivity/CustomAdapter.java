@@ -34,12 +34,14 @@ public class CustomAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         TextView textView = new TextView(context);
         textView.setText(getItem(i).toString());
+        textView.setBackgroundColor(Color.WHITE);
         return textView;
     }
 
     @Override
     public View getDropDownView(int position, View convertView, ViewGroup parent){
         View v = getView(position, convertView, parent);
+
 
         if(((TextView) v).getText().equals("White")) {
             v.setBackgroundColor(Color.WHITE);
